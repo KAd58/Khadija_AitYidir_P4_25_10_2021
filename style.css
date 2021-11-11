@@ -28,10 +28,10 @@ a:hover {
 }
 
 .bloc {
-    width: 100%;
+    width: auto;
     clear: both;
     background: 50% 50% no-repeat;
-    padding: 0 50px;
+    /*padding: 0 50px;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -47,7 +47,10 @@ a:hover {
 .bloc-lg {
     padding: 100px 50px;
 }
-
+.col-sm-6
+{
+    padding-top:80px;
+}
 .bloc-md {
     padding: 50px;
 }
@@ -268,7 +271,11 @@ a:hover {
 .voffset-lg {
     margin-top: 80px;
 }
-
+.flex
+{
+    display:flex;
+    flex-direction: column;
+}
 .row-no-gutters {
     margin-right: 0;
     margin-left: 0;
@@ -318,13 +325,25 @@ a:hover {
     float: right;
     z-index: 1;
 }
+ul
+{
+    display:flex;
+    padding-left:0;
 
+}
 .nav  li {
    
-    display:flex;
-    justify-content: space-between;
     margin-top: 4px;
     font-size: 16px;
+    display:flex;
+    padding-right:10px;
+    padding-left:10px;
+    
+}
+li
+{
+    list-style-type:none;
+   
 }
 
 .navbar-nav .open .dropdown-menu > li > a {
@@ -365,9 +384,7 @@ a:hover {
     .site-navigation {
         position: absolute;
         top: 50%;
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
+        left:75%;
         transform: translate(0, -50%);
         -webkit-transform: translateY(-50%);
     }
@@ -457,8 +474,8 @@ nav .caret {
 .btn-d,
 .btn-d:hover,
 .btn-d:focus {
-    color: #FFF;
-    background: rgba(0, 0, 0, .3);
+    color: #FFFF;
+    background: rgb(211 204 204 / 99%);
 }
 
 button {
@@ -507,8 +524,16 @@ button {
 }
 
 .form-control {
-    border-color: rgba(0, 0, 0, .1);
+    border:2px solid rgba(39, 37, 37, 0.1);
+    border-radius:5px;
     box-shadow: none;
+    width:100%;
+}
+.form-group
+{display: flex;
+flex-direction: column;
+margin-top:10px;
+font-size:18px;
 }
 
 .scrollToTop {
@@ -517,13 +542,15 @@ button {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    opacity: 0;
+    opacity: 1;
     z-index: 500;
     transition: all .3s ease-in-out;
 }
 
-.scrollToTop span {
-    margin-top: 6px;
+.scrollToTop i {
+    margin-top: 6px;   
+    color:black;
+   
 }
 
 .showScrollTop {
@@ -658,7 +685,13 @@ a {
 .container {
     max-width: 1000px;
 }
-
+.text-center
+{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
 .hero-bloc-text {
     font-size: 38px;
 }
@@ -678,7 +711,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .tight-width-whitespace {
@@ -784,6 +817,8 @@ h4 {
 .btn-atomic-tangerine {
     background: #03111D;
     color: #FFFFFF!important;
+    width:auto;
+    
 }
 
 .btn-atomic-tangerine:hover {
